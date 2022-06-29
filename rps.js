@@ -4,6 +4,7 @@ function computerPlay () {
     const cchoices = ["rock", "paper", "scissors"];
     cplay = Math.floor (Math.random() * cchoices.length);
     console.log ("Computer chooses " + cchoices[cplay] + ".");
+    c = cchoices[cplay]
 } 
 
 function playerSelection() {
@@ -28,8 +29,10 @@ computerPlay()
         console.log ("Scissors beat paper, player win!")
     } else if (actualchoice == "paper" && cplay == 2) {
         console.log ("Scissors beat paper, computer win!")
-    } else {
+    } else if (c == actualchoice) {
         console.log ("Tie!")
+    } else {
+        console.log ("ERROR!")
     }}
 
 function playGame() {
