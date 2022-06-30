@@ -122,5 +122,24 @@ function playGame() {
      compmove.textContent = ("Computer chooses " + c + ".");
      pscore.textContent = ("Player score is " + playerscore + ".");
      cscore.textContent = ("Computer score is " + compscore + ".");
+
+     if (playerscore > 5) {
+        compmove.textContent = ("");
+        result.textContent = ("");
+        pscore.textContent = ("");
+        cscore.textContent = ("");
+        welcome2.textContent = 'You win! Reset to play again.';
+    
+    }
+    
+    if (compscore > 5) {
+        compmove.textContent = ("");
+        result.textContent = ("");
+        pscore.textContent = ("");
+        cscore.textContent = ("");
+        welcome2.textContent = 'Computer wins! Reset to play again';
+    
+    }
+    
     
     }
