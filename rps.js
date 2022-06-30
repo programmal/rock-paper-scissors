@@ -39,8 +39,11 @@ const rpsgamecontainer = document.querySelector ("#rpsgame");
  const paper = document.createElement('button');
  const scissors = document.createElement('button');
  rock.textContent = 'Rock';
+ rock.innerHTML = '<img src = "./images/147847-200.png">'
  paper.textContent = 'Paper';
+ paper.innerHTML = '<img src = "./images/147844-200.png">'
  scissors.textContent = 'Scissors';
+ scissors.innerHTML = '<img src = "./images/147845-200.png">'
  rpsgame.appendChild(rock);
  rpsgame.appendChild(paper);
  rpsgame.appendChild(scissors);
