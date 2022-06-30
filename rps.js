@@ -10,9 +10,11 @@ welcomemain.appendChild (welcome2);
 
 // Logs results, keeps score.
 const gameresult = document.querySelector('#results');
+const compmove = document.createElement ('p');
 const result = document.createElement('p');
 const pscore = document.createElement('p');
 const cscore = document.createElement('p');
+results.appendChild(compmove);
 results.appendChild(result);
 results.appendChild(pscore);
 results.appendChild(cscore);
@@ -21,8 +23,10 @@ reset.textContent = 'Reset';
 reset.addEventListener('click', () => {
     playerscore = 0;
     compscore = 0;
-    pscore.textContent = ("Player score is " + playerscore + ".");
-    cscore.textContent = ("Computer score is " + compscore + ".");
+    compmove.textContent = ("");
+    result.textContent = ("");
+    pscore.textContent = ("");
+    cscore.textContent = ("");
     welcome2.textContent = '- Choose one -';
     
 
@@ -72,7 +76,6 @@ compscore = 0
 function computerPlay () {
     const cchoices = ["rock", "paper", "scissors"];
     cplay = Math.floor (Math.random() * cchoices.length);
-    console.log ("Computer chooses " + cchoices[cplay] + ".");
     c = cchoices[cplay]
 } 
 
@@ -116,6 +119,7 @@ function playGame() {
      //   playRound()}}
 
      playRound();
+     compmove.textContent = ("Computer chooses " + c + ".");
      pscore.textContent = ("Player score is " + playerscore + ".");
      cscore.textContent = ("Computer score is " + compscore + ".");
     
